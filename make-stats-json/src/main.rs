@@ -57,25 +57,26 @@ async fn main() -> Result<(), sqlx::Error> {
         Some(db_file) => match db_file.to_str() {
             Some(file) => {
                 let pool = SqlitePoolOptions::new()
-                    .max_connections(5)
+                    .max_connections(3)
                     .connect(file)
                     .await?;
 
-                let homelands =
+                let homelands_query =
                     sqlx::query_as!(Homeland, "SELECT [id], [homeland] FROM [homelands]")
-                        .fetch_all(&pool)
-                        .await?;
+                        .fetch_all(&pool);
 
-                let classes = sqlx::query_as!(Class, "SELECT [id], [class] FROM [classes]")
-                    .fetch_all(&pool)
-                    .await?;
+                let classes_query =
+                    sqlx::query_as!(Class, "SELECT [id], [class] FROM [classes]").fetch_all(&pool);
 
-                let statted_chars = sqlx::query_as!(StattedChar, "
+                let statted_chars_query = sqlx::query_as!(StattedChar, "
                     SELECT 
                         [s].[id], [t].[homelandId] as homeland_id, [t].[classId] as class_id, str, int, wil, dex, con 
                     FROM [stats] as [s]
                     JOIN [toons] as [t] ON [s].[toonId] = [t].[id]
-                    ").fetch_all(&pool).await?;
+                    ").fetch_all(&pool);
+
+                let (homelands, classes, statted_chars) =
+                    tokio::try_join!(homelands_query, classes_query, statted_chars_query)?;
 
                 let data_file = DataFile {
                     homelands,
@@ -83,7 +84,7 @@ async fn main() -> Result<(), sqlx::Error> {
                     statted_chars,
                 };
 
-                match serde_json::to_string(&data_file) {
+                match serde_json::to_string_pretty(&data_file) {
                     Ok(s) => println!("{}", s),
                     Err(e) => println!("Error: {:?}", e),
                 }
