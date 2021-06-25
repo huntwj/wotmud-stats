@@ -1,15 +1,16 @@
-use std::path::PathBuf;
+mod cli;
+mod config;
 
-use structopt::StructOpt;
-
-#[derive(Debug, StructOpt)]
-struct Cli {
-    /// The source statting db file (SQLite3 format).
-    db_file: PathBuf,
-}
+use cli::Cli;
+use config::Config;
 
 fn main() {
-    let cli = Cli::from_args();
+    let cli = Cli::new();
+    let config = Config::from(&cli);
 
-    println!("{:?}", cli);
+    println!("Configuration options:\n{:?}", config);
+
+    if cli.save {
+        config.save();
+    }
 }
