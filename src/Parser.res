@@ -1,83 +1,101 @@
 open Js.Json
 open Types
+open Belt
+
+// General Parser stuffs. This should be moved to its own package/module.
 
 let _isInteger = val => Js.Float.isFinite(val) && Js.Math.floor_float(val) == val
 
-let foo = arrayOfResults => arrayOfResults->Js.Array2.reduce((acc, val) => {
-    switch (acc, val) {
-    | (Ok(soFar), Ok(next)) => Ok(Js.Array2.concat(soFar, [next]))
-    | (Error(e), _) => Error(e)
-    | (_, Error(e)) => Error(e)
-    }
-  }, Ok([]))
+let _jtToString = ttype =>
+  switch ttype {
+  | JSONNumber(n) => `number (${n->Js.Float.toString})`
+  | JSONObject(_) => `object`
+  | JSONFalse => "boolean (false)"
+  | JSONTrue => "boolean (true)"
+  | JSONNull => "null"
+  | JSONString(s) => `string (${s})`
+  | JSONArray(_) => `array`
+  }
 
-let parseString = val => {
-  switch val->classify {
+let err = (context, expected, found) => Error(
+  `${context} should be ${expected}, but found ${found->classify->_jtToString}.`,
+)
+
+let parseString = (u, context) => {
+  switch u->classify {
   | JSONString(s) => Ok(s)
-  | _ => Error("Expected string value")
+  | _ => err(context, "a string", u)
   }
 }
 
-let parseInt = val => {
-  switch val->classify {
+let parseInt = (u, context) => {
+  switch u->classify {
   | JSONNumber(n) if n->_isInteger => Ok(n->Js.Math.floor_int)
-  | _ => Error("Expected integer value")
+  | _ => err(context, "an integer", u)
   }
 }
 
-let parseField = (o, field, parser) => {
-  switch o->Js.Dict.get(field) {
-  | None => Error(`Record missing ${field} field`)
-  | Some(val) => val->parser
-  }
-}
-
-let parseId = o => {
-  switch o->classify {
+let parseId = (u, context) => {
+  switch u->classify {
   | JSONString(s) => Ok(s)
   | JSONNumber(n) => Ok(n->Js.Float.toString)
-  | _ => Error("Invalid type for id field. Must be string or number")
+  | _ => err(context, "a string or number", u)
   }
 }
 
-let parseArray = (parser, data) => {
-  switch data->classify {
-  | JSONArray(arrayData) => arrayData->Js.Array2.map(parser)->foo
-  | _ => Error("Expected array value")
+let parseArray = (parser, u, context) => {
+  switch u->classify {
+  | JSONArray(arrayData) =>
+    arrayData->Util.flatMapArrayI((inData, idx) =>
+      parser(inData, `${context}[${idx->Js.Int.toString}]`)
+    )
+  | _ => err(context, "an array", u)
   }
 }
 
-let parseNameAndId = (data, constructor, typeString) => {
-  switch data->classify {
+let parseField = (dict, field, context, parser) => {
+  let newContext = `${context}['${field}']`
+  switch dict->Js.Dict.get(field) {
+  | None => Error(`missing field ${newContext}`)
+  | Some(val) => val->parser(newContext)
+  }
+}
+
+let parseObject = (fieldParser, u, context) => {
+  switch u->classify {
   | JSONObject(o) =>
-    o
-    ->parseField("id", parseId)
-    ->Belt.Result.flatMap(id => {
-      o->parseField("name", parseString)->Belt.Result.map(name => constructor(id, name))
-    })
-  | _ => Error(`${typeString} record must be an object.`)
+    // let parseField = (field, parser) => {
+    //   parseField_(o, field, context, parser)
+    // }
+    fieldParser(o)
+  | _ => err(context, "an object", u)
   }
 }
 
-let parseClass = data => {
-  parseNameAndId(data, (id, name): Types.class => {id: id, name: name}, "Class")
+//
+// And now for my stuff.
+//
+let parseNameAndId = (constructor, u, context) => {
+  parseObject(f => {
+    parseField(f, "id", context, parseId)->Result.flatMap(id =>
+      parseField(f, "name", context, parseString)->Result.map(name => constructor(id, name))
+    )
+  }, u, context)
 }
 
-let parseHomeland = data => {
-  parseNameAndId(data, (id, name): Types.homeland => {id: id, name: name}, "Homeland")
-}
+let parseClass = parseNameAndId((id, name): Types.class => {id: id, name: name})
+let parseHomeland = parseNameAndId((id, name): Types.homeland => {id: id, name: name})
 
-let parseStattedChar = data => {
-  switch data->classify {
-  | JSONObject(o) =>
-    parseField(o, "id", parseId)->Belt.Result.flatMap(id =>
-      parseField(o, "classId", parseId)->Belt.Result.flatMap(classId =>
-        parseField(o, "homelandId", parseId)->Belt.Result.flatMap(homelandId =>
-          parseField(o, "str", parseInt)->Belt.Result.flatMap(str =>
-            parseField(o, "int", parseInt)->Belt.Result.flatMap(int_ =>
-              parseField(o, "wil", parseInt)->Belt.Result.flatMap(wil =>
-                parseField(o, "dex", parseInt)->Belt.Result.flatMap(dex =>
-                  parseField(o, "con", parseInt)->Belt.Result.map((con): Types.stattedChar => {
+let parseStattedChar = (data, context) => {
+  parseObject(o =>
+    parseField(o, "id", context, parseId)->Result.flatMap(id =>
+      parseField(o, "classId", context, parseId)->Result.flatMap(classId =>
+        parseField(o, "homelandId", context, parseId)->Result.flatMap(homelandId =>
+          parseField(o, "str", context, parseInt)->Result.flatMap(str =>
+            parseField(o, "int", context, parseInt)->Result.flatMap(int_ =>
+              parseField(o, "wil", context, parseInt)->Result.flatMap(wil =>
+                parseField(o, "dex", context, parseInt)->Result.flatMap(dex =>
+                  parseField(o, "con", context, parseInt)->Result.map((con): Types.stattedChar => {
                     {
                       id: id,
                       classId: classId,
@@ -96,24 +114,28 @@ let parseStattedChar = data => {
         )
       )
     )
-  | _ => Error("Statted character JSON must be an object.")
-  }
+  , data, context)
 }
 
-let parseDataFile = data => {
-  switch data->classify {
-  | JSONObject(o) =>
-    parseField(o, "classes", parseArray(parseClass))->Belt.Result.flatMap(classes =>
-      parseField(o, "homelands", parseArray(parseHomeland))->Belt.Result.flatMap(homelands =>
-        parseField(o, "stattedChars", parseArray(parseStattedChar))->Belt.Result.map((
-          stattedChars
-        ): Types.dataFile => {
-          classes: classes,
-          homelands: homelands,
-          stattedChars: stattedChars,
-        })
+let parseDataFile = (data: 'json): result<'a, string> => {
+  let parser = (u, context) => parseObject(fields => {
+      parseField(
+        fields,
+        "homelands",
+        context,
+        parseArray(parseHomeland),
+      )->Result.flatMap(homelands =>
+        parseField(fields, "classes", context, parseArray(parseClass))->Result.flatMap(classes =>
+          parseField(fields, "stattedChars", context, parseArray(parseStattedChar))->Result.map((
+            stattedChars
+          ): Types.dataFile => {
+            classes: classes,
+            homelands: homelands,
+            stattedChars: stattedChars,
+          })
+        )
       )
-    )
-  | _ => Error("Data file should be an object JSON.")
-  }
+    }, u, "dataFile")
+
+  parser(data, "jsonFile")
 }
