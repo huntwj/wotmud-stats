@@ -43,6 +43,17 @@ let parseId = (u, context) => {
   }
 }
 
+let parseOption = (parser, u, context) => {
+  switch u->classify {
+  | JSONNull => Ok(None)
+  | _ =>
+    switch parser(u, context) {
+    | Ok(val) => Ok(Some(val))
+    | Error(e) => Error(e)
+    }
+  }
+}
+
 let parseArray = (parser, u, context) => {
   switch u->classify {
   | JSONArray(arrayData) =>
@@ -58,6 +69,14 @@ let parseField = (dict, field, context, parser) => {
   switch dict->Js.Dict.get(field) {
   | None => Error(`missing field ${newContext}`)
   | Some(val) => val->parser(newContext)
+  }
+}
+
+let parseOptionalField = (dict, field, context, parser) => {
+  let newContext = `${context}['${field}']`
+  switch dict->Js.Dict.get(field) {
+  | None => Ok(None)
+  | Some(val) => val->parser(newContext)->Belt.Result.map(v => Some(v))
   }
 }
 
