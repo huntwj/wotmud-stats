@@ -25,3 +25,8 @@ yarn-error.log*
 # Rescript compiler artifacts
 /lib
 .merlin
+.bsb.lock
+
+# Since we're not intermixing, we can keep the build js out of the repository.
+*.bs.js
+
