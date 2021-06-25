@@ -1,5 +1,5 @@
 {
-    "name": "WoTMUD Stats Site",
+    "name": "wotud-stats-site",
     "reason": {
         "react-jsx": 3
     },
@@ -12,7 +12,6 @@
     "bsc-flags": [
         "-bs-super-errors"
     ],
-    "refmt": 3,
     "package-specs": [
         {
             "module": "es6",
