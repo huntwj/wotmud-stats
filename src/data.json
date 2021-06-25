@@ -1,0 +1,54 @@
+{
+    "homelands": [
+        {
+            "id": "1",
+            "name": "Illian"
+        },
+        {
+            "id": "2",
+            "name": "Altara"
+        },
+        {
+            "id": "3",
+            "name": "Two Rivers"
+        },
+        {
+            "id": "4",
+            "name": "Borderlands"
+        },
+        {
+            "id": "5",
+            "name": "Tear"
+        }
+    ],
+    "classes": [
+        {
+            "id": "1",
+            "name": "Hunter"
+        },
+        {
+            "id": "2",
+            "name": "Warrior"
+        },
+        {
+            "id": "2",
+            "name": "Rogue"
+        },
+        {
+            "id": "2",
+            "name": "Channeler"
+        }
+    ],
+    "stattedChars": [
+        {
+            "id": "1",
+            "homelandId": "1",
+            "classId": "1",
+            "str": 14,
+            "int": 15,
+            "wil": 17,
+            "dex": 19,
+            "con": 18
+        }
+    ]
+}
