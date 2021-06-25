@@ -1,4 +1,4 @@
-%%private(@module("./data.json") external data: 'json = "default")
+%%private(@module("./data2.json") external data: 'json = "default")
 
 open Belt
 open Types
