@@ -1,0 +1,2 @@
+[workspace]
+members = ["make-stats-json"]
