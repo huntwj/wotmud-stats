@@ -9,6 +9,10 @@
             "subdirs": true
         }
     ],
+    "bsc-flags": [
+        "-bs-super-errors"
+    ],
+    "refmt": 3,
     "package-specs": [
         {
             "module": "es6",
@@ -16,6 +20,10 @@
         }
     ],
     "suffix": ".bs.js",
+    "namespace": true,
+    "gentypeconfig": {
+        "language": "typescript"
+    },
     "bs-dependencies": [
         "@rescript/react"
     ]
