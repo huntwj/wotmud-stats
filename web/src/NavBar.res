@@ -1,21 +1,22 @@
 module NavButton = {
   @react.component
   let make = (~name: string, ~selected: string, ~linkTo: string) => {
-    let style = if selected == name {
-      ReactDOM.Style.make(~backgroundColor="#656565", ~padding="1ex", ~cursor="pointer", ())
-    } else {
-      ReactDOM.Style.make(~backgroundColor="#efefef", ~padding="1ex", ~cursor="pointer", ())
-    }
+    open MaterialUi
 
-    <div style={style} onClick={_ => RescriptReactRouter.push(linkTo)}> {name->React.string} </div>
+    <Button color={#Default} onClick={_ => RescriptReactRouter.push(linkTo)}>
+      {name->React.string}
+    </Button>
   }
 }
 
 @react.component
 let make = () => {
+  open MaterialUi
+
   let url = RescriptReactRouter.useUrl()
 
   let selected = switch url.path {
+  | list{"stats", ..._} => "Stats Table"
   | list{"homelands", homeland} => `Homeland (${homeland})`
   | list{"homelands", ..._} => "Homelands"
   | list{"classes", class} => `Class (${class})`
@@ -24,10 +25,12 @@ let make = () => {
   | _ => "404"
   }
 
-  let style = ReactDOM.Style.make(~display="flex", ~justifyContent="center", ())
-  <div style={style}>
-    <NavButton name="Home" selected={selected} linkTo="/" />
-    <NavButton name="Homelands" selected={selected} linkTo="/homelands" />
-    <NavButton name="Classes" selected={selected} linkTo="/classes" />
-  </div>
+  <AppBar position={#Static}>
+    <Toolbar>
+      <NavButton name="Home" selected={selected} linkTo="/" />
+      <NavButton name="Stats" selected={selected} linkTo="/stats" />
+      <NavButton name="Homelands" selected={selected} linkTo="/homelands" />
+      <NavButton name="Classes" selected={selected} linkTo="/classes" />
+    </Toolbar>
+  </AppBar>
 }

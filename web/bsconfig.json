@@ -24,6 +24,7 @@
         "language": "typescript"
     },
     "bs-dependencies": [
-        "@rescript/react"
+        "@rescript/react",
+        "rescript-material-ui"
     ]
 }
