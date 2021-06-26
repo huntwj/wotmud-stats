@@ -6,22 +6,33 @@ open Belt
 let make = () => {
   let (state, dispatch) = React.useReducer(Store.reducer, Store.initialState)
 
-  let url = RescriptReactRouter.useUrl()
-
   let allStattedChars =
     state.stattedChars
     ->Map.String.valuesToArray
-    ->Js.Array2.filter(stattedChar => stattedChar.homelandId == "1" && stattedChar.classId == "1")
+    ->Js.Array2.filter(stattedChar =>
+      switch state.classFilter {
+      | Some(class) if class.id != stattedChar.classId => false
+      | _ => true
+      }
+    )
+    ->Js.Array2.filter(stattedChar =>
+      switch state.homelandFilter {
+      | Some(homeland) if homeland.id != stattedChar.homelandId => false
+      | _ => true
+      }
+    )
 
-  let body = switch url.path {
-  | list{"stats"} => <StatsTable stattedChars={allStattedChars} />
-  | list{"homelands"} => <AllHomelands homelands={state.homelands} />
-  | list{"homelands", homeland} => <div> {`View Homeland Data for ${homeland}`->React.string} </div>
-  | list{"classes"} => <div> <AllClasses classes={state.classes} /> </div>
-  | list{"classes", class} => <div> {`Class Data for ${class}`->React.string} </div>
-  | list{} => <div> {"Home page"->React.string} </div>
-  | _ => <div> {"Page not found"->React.string} </div>
-  }
+  let body = <StatsTable stattedChars={allStattedChars} />
 
-  <React.Fragment> <MaterialUi_CssBaseline /> <NavBar /> {body} </React.Fragment>
+  <React.Fragment>
+    <MaterialUi_CssBaseline />
+    <NavBar
+      classes={state.classes->Map.String.valuesToArray}
+      classFilter={state.classFilter}
+      homelands={state.homelands->Map.String.valuesToArray}
+      homelandFilter={state.homelandFilter}
+      dispatch={dispatch}
+    />
+    {body}
+  </React.Fragment>
 }

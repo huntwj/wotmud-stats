@@ -7,6 +7,8 @@ type state = {
   homelands: Map.String.t<homeland>,
   classes: Map.String.t<class>,
   stattedChars: Map.String.t<stattedChar>,
+  homelandFilter: option<homeland>,
+  classFilter: option<class>,
 }
 
 let mapFromArray = arrData => arrData->Array.map(e => (e.id, e))->Map.String.fromArray
@@ -26,6 +28,8 @@ let initialState = {
         classes: classes,
         homelands: homelands,
         stattedChars: stattedChars,
+        homelandFilter: None,
+        classFilter: None,
       }
     }
   | Error(reason) => {
@@ -34,30 +38,28 @@ let initialState = {
         homelands: Map.String.empty,
         classes: Map.String.empty,
         stattedChars: Map.String.empty,
+        homelandFilter: None,
+        classFilter: None,
       }
     }
   }
 }
 
 type action =
-  | AddHomeland({id: string, name: string})
-  | AddClass({id: string, name: string})
-  | UpdateFilterHomeland(option<string>)
-  | UpdateFilterClass(option<string>)
+  | UpdateFilterHomeland(option<homeland>)
+  | UpdateFilterClass(option<class>)
 
 let reducer = (state: state, action: action) => {
   switch action {
-  | AddHomeland({id, name}) => {
-      homelands: Map.String.set(state.homelands, id, {id: id, name: name}),
-      classes: state.classes,
-      stattedChars: state.stattedChars,
+  | UpdateFilterClass(classFilter) => {
+      ...state,
+      classFilter: classFilter,
     }
-  | AddClass({id, name}) => {
-      homelands: state.homelands,
-      classes: Map.String.set(state.classes, id, {id: id, name: name}),
-      stattedChars: state.stattedChars,
+  | UpdateFilterHomeland(homelandFilter) => {
+      ...state,
+      homelandFilter: homelandFilter,
     }
-  | UpdateFilterClass(_) => state
-  | UpdateFilterHomeland(_) => state
   }
 }
+
+type dispatch = action => unit
