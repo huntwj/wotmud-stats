@@ -19385,6 +19385,606 @@
       "wil": 14,
       "dex": 16,
       "con": 15
+    },
+    {
+      "id": 1936,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 11,
+      "dex": 16,
+      "con": 16
+    },
+    {
+      "id": 1937,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 15,
+      "wil": 15,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1938,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 17,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1939,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 15,
+      "wil": 14,
+      "dex": 13,
+      "con": 15
+    },
+    {
+      "id": 1940,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1941,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 17,
+      "wil": 11,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1942,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 14,
+      "wil": 15,
+      "dex": 13,
+      "con": 15
+    },
+    {
+      "id": 1943,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 13,
+      "wil": 17,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1944,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 11,
+      "wil": 15,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1945,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 14,
+      "dex": 15,
+      "con": 18
+    },
+    {
+      "id": 1946,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 14,
+      "dex": 19,
+      "con": 13
+    },
+    {
+      "id": 1947,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 17,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1948,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 15,
+      "wil": 17,
+      "dex": 12,
+      "con": 15
+    },
+    {
+      "id": 1949,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 14,
+      "wil": 11,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1950,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 18,
+      "con": 13
+    },
+    {
+      "id": 1951,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 14,
+      "dex": 19,
+      "con": 16
+    },
+    {
+      "id": 1952,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 18,
+      "wil": 13,
+      "dex": 16,
+      "con": 14
+    },
+    {
+      "id": 1953,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 11,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1954,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 16,
+      "dex": 19,
+      "con": 14
+    },
+    {
+      "id": 1955,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 13,
+      "wil": 17,
+      "dex": 18,
+      "con": 12
+    },
+    {
+      "id": 1956,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 10,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1957,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 12,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1958,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 16,
+      "wil": 17,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1959,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 18,
+      "dex": 13,
+      "con": 13
+    },
+    {
+      "id": 1960,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 15,
+      "con": 15
+    },
+    {
+      "id": 1961,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 10,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1962,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 14
+    },
+    {
+      "id": 1963,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1964,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 13,
+      "con": 15
+    },
+    {
+      "id": 1965,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 13,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1966,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 18,
+      "wil": 17,
+      "dex": 16,
+      "con": 11
+    },
+    {
+      "id": 1967,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 14,
+      "wil": 16,
+      "dex": 16,
+      "con": 16
+    },
+    {
+      "id": 1968,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 15,
+      "wil": 13,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1969,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 13,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1970,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1971,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 10,
+      "int": 14,
+      "wil": 14,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1972,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 15,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1973,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 16,
+      "wil": 18,
+      "dex": 15,
+      "con": 15
+    },
+    {
+      "id": 1974,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 17,
+      "wil": 12,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1975,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 13
+    },
+    {
+      "id": 1976,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 14,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1977,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 10,
+      "int": 15,
+      "wil": 14,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1978,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 10,
+      "wil": 17,
+      "dex": 16,
+      "con": 11
+    },
+    {
+      "id": 1979,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 18,
+      "int": 14,
+      "wil": 12,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1980,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1981,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 10,
+      "wil": 14,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1982,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 10,
+      "wil": 17,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1983,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 18,
+      "int": 17,
+      "wil": 17,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1984,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 19,
+      "con": 16
+    },
+    {
+      "id": 1985,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 18,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1986,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 14,
+      "wil": 17,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1987,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1988,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 18,
+      "wil": 14,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1989,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 16,
+      "dex": 16,
+      "con": 11
+    },
+    {
+      "id": 1990,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 11,
+      "int": 12,
+      "wil": 16,
+      "dex": 19,
+      "con": 14
+    },
+    {
+      "id": 1991,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 15,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1992,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 17,
+      "wil": 14,
+      "dex": 19,
+      "con": 17
+    },
+    {
+      "id": 1993,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 14,
+      "wil": 14,
+      "dex": 18,
+      "con": 17
+    },
+    {
+      "id": 1994,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 13,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1995,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 11,
+      "wil": 16,
+      "dex": 16,
+      "con": 18
     }
   ]
 }
