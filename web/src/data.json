@@ -18515,6 +18515,776 @@
       "wil": 18,
       "dex": 16,
       "con": 15
+    },
+    {
+      "id": 1849,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 13,
+      "wil": 13,
+      "dex": 13,
+      "con": 16
+    },
+    {
+      "id": 1850,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 14,
+      "wil": 10,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1851,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1852,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 17,
+      "wil": 16,
+      "dex": 13,
+      "con": 12
+    },
+    {
+      "id": 1853,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 12,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1854,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 10,
+      "wil": 18,
+      "dex": 13,
+      "con": 15
+    },
+    {
+      "id": 1855,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1856,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 11,
+      "wil": 17,
+      "dex": 19,
+      "con": 17
+    },
+    {
+      "id": 1857,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1858,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 14,
+      "wil": 15,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1859,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 10,
+      "int": 17,
+      "wil": 13,
+      "dex": 19,
+      "con": 16
+    },
+    {
+      "id": 1860,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 15,
+      "wil": 11,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1861,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 14,
+      "wil": 15,
+      "dex": 14,
+      "con": 14
+    },
+    {
+      "id": 1862,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 15,
+      "wil": 14,
+      "dex": 19,
+      "con": 17
+    },
+    {
+      "id": 1863,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 12,
+      "wil": 17,
+      "dex": 16,
+      "con": 16
+    },
+    {
+      "id": 1864,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 13,
+      "wil": 14,
+      "dex": 19,
+      "con": 17
+    },
+    {
+      "id": 1865,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 18,
+      "int": 13,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1866,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 17,
+      "dex": 17,
+      "con": 19
+    },
+    {
+      "id": 1867,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 11,
+      "int": 16,
+      "wil": 14,
+      "dex": 19,
+      "con": 14
+    },
+    {
+      "id": 1868,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 11,
+      "wil": 16,
+      "dex": 16,
+      "con": 13
+    },
+    {
+      "id": 1869,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 15,
+      "wil": 16,
+      "dex": 16,
+      "con": 14
+    },
+    {
+      "id": 1870,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 14,
+      "wil": 17,
+      "dex": 14,
+      "con": 15
+    },
+    {
+      "id": 1871,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 13,
+      "dex": 15,
+      "con": 15
+    },
+    {
+      "id": 1872,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1873,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 11,
+      "wil": 18,
+      "dex": 16,
+      "con": 13
+    },
+    {
+      "id": 1874,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 15,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1875,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 14,
+      "wil": 14,
+      "dex": 15,
+      "con": 16
+    },
+    {
+      "id": 1876,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 15,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1877,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 14,
+      "wil": 15,
+      "dex": 19,
+      "con": 18
+    },
+    {
+      "id": 1878,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1879,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 13,
+      "wil": 17,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1880,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 17,
+      "wil": 15,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1881,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 18,
+      "int": 13,
+      "wil": 14,
+      "dex": 16,
+      "con": 11
+    },
+    {
+      "id": 1882,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 18,
+      "wil": 16,
+      "dex": 15,
+      "con": 19
+    },
+    {
+      "id": 1883,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 11,
+      "wil": 14,
+      "dex": 19,
+      "con": 19
+    },
+    {
+      "id": 1884,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 18,
+      "dex": 18,
+      "con": 14
+    },
+    {
+      "id": 1885,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 18,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1886,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1887,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 13,
+      "wil": 14,
+      "dex": 19,
+      "con": 12
+    },
+    {
+      "id": 1888,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 13,
+      "wil": 15,
+      "dex": 19,
+      "con": 18
+    },
+    {
+      "id": 1889,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 15,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1890,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 18,
+      "dex": 18,
+      "con": 17
+    },
+    {
+      "id": 1891,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 15,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1892,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 17,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1893,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 17,
+      "wil": 14,
+      "dex": 14,
+      "con": 18
+    },
+    {
+      "id": 1894,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 17,
+      "dex": 18,
+      "con": 18
+    },
+    {
+      "id": 1895,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1896,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 13,
+      "wil": 14,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1897,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 14,
+      "wil": 16,
+      "dex": 19,
+      "con": 18
+    },
+    {
+      "id": 1898,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 17,
+      "dex": 15,
+      "con": 18
+    },
+    {
+      "id": 1899,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1900,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 14,
+      "dex": 17,
+      "con": 18
+    },
+    {
+      "id": 1901,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 11,
+      "int": 16,
+      "wil": 15,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1902,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 15,
+      "wil": 14,
+      "dex": 16,
+      "con": 19
+    },
+    {
+      "id": 1903,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 10,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1904,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 16,
+      "wil": 16,
+      "dex": 16,
+      "con": 19
+    },
+    {
+      "id": 1905,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 17,
+      "wil": 16,
+      "dex": 15,
+      "con": 15
+    },
+    {
+      "id": 1906,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 14,
+      "wil": 11,
+      "dex": 17,
+      "con": 16
+    },
+    {
+      "id": 1907,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 17,
+      "wil": 16,
+      "dex": 16,
+      "con": 17
+    },
+    {
+      "id": 1908,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 17,
+      "int": 17,
+      "wil": 14,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1909,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 14,
+      "wil": 15,
+      "dex": 19,
+      "con": 15
+    },
+    {
+      "id": 1910,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1911,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 17,
+      "wil": 11,
+      "dex": 16,
+      "con": 16
+    },
+    {
+      "id": 1912,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 13,
+      "wil": 14,
+      "dex": 18,
+      "con": 15
+    },
+    {
+      "id": 1913,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 12,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1914,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 10,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1915,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 12,
+      "int": 14,
+      "wil": 14,
+      "dex": 15,
+      "con": 17
+    },
+    {
+      "id": 1916,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1917,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 16,
+      "wil": 14,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1918,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 18,
+      "int": 15,
+      "wil": 12,
+      "dex": 16,
+      "con": 18
+    },
+    {
+      "id": 1919,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 15,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1920,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 14,
+      "wil": 14,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1921,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 16,
+      "int": 10,
+      "wil": 16,
+      "dex": 16,
+      "con": 15
+    },
+    {
+      "id": 1922,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 14,
+      "int": 14,
+      "wil": 14,
+      "dex": 16,
+      "con": 16
+    },
+    {
+      "id": 1923,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 10,
+      "int": 15,
+      "wil": 14,
+      "dex": 18,
+      "con": 18
+    },
+    {
+      "id": 1924,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 13,
+      "int": 16,
+      "wil": 13,
+      "dex": 17,
+      "con": 15
+    },
+    {
+      "id": 1925,
+      "classId": 1,
+      "homelandId": 1,
+      "str": 15,
+      "int": 15,
+      "wil": 14,
+      "dex": 16,
+      "con": 15
     }
   ]
 }
