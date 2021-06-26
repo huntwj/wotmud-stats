@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wotmud-stats/static/css/main.8bcbd900.chunk.css",
+    "main.js": "/wotmud-stats/static/js/main.74fd75d6.chunk.js",
+    "main.js.map": "/wotmud-stats/static/js/main.74fd75d6.chunk.js.map",
+    "runtime-main.js": "/wotmud-stats/static/js/runtime-main.aa3d30b5.js",
+    "runtime-main.js.map": "/wotmud-stats/static/js/runtime-main.aa3d30b5.js.map",
+    "static/js/2.4602bf0a.chunk.js": "/wotmud-stats/static/js/2.4602bf0a.chunk.js",
+    "static/js/2.4602bf0a.chunk.js.map": "/wotmud-stats/static/js/2.4602bf0a.chunk.js.map",
+    "static/js/3.7d69143c.chunk.js": "/wotmud-stats/static/js/3.7d69143c.chunk.js",
+    "static/js/3.7d69143c.chunk.js.map": "/wotmud-stats/static/js/3.7d69143c.chunk.js.map",
+    "index.html": "/wotmud-stats/index.html",
+    "static/css/main.8bcbd900.chunk.css.map": "/wotmud-stats/static/css/main.8bcbd900.chunk.css.map",
+    "static/js/2.4602bf0a.chunk.js.LICENSE.txt": "/wotmud-stats/static/js/2.4602bf0a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa3d30b5.js",
+    "static/js/2.4602bf0a.chunk.js",
+    "static/css/main.8bcbd900.chunk.css",
+    "static/js/main.74fd75d6.chunk.js"
+  ]
+}
