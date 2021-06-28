@@ -111,19 +111,23 @@ let parseStattedChar = (data, context) => {
       parseField(o, "classId", context, parseId)->Result.flatMap(classId =>
         parseField(o, "homelandId", context, parseId)->Result.flatMap(homelandId =>
           parseField(o, "str", context, parseInt)->Result.flatMap(str =>
-            parseField(o, "int", context, parseInt)->Result.flatMap(int_ =>
+            parseField(o, "int", context, parseInt)->Result.flatMap(_int =>
               parseField(o, "wil", context, parseInt)->Result.flatMap(wil =>
                 parseField(o, "dex", context, parseInt)->Result.flatMap(dex =>
-                  parseField(o, "con", context, parseInt)->Result.map((con): Types.stattedChar => {
+                  parseField(o, "con", context, parseInt)->Result.map((
+                    con
+                  ): Types.StattedChar.t => {
                     {
                       id: id,
                       classId: classId,
                       homelandId: homelandId,
-                      str: str,
-                      int_: int_,
-                      wil: wil,
-                      dex: dex,
-                      con: con,
+                      stats: {
+                        str: str,
+                        _int: _int,
+                        wil: wil,
+                        dex: dex,
+                        con: con,
+                      },
                     }
                   })
                 )

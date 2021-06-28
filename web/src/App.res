@@ -22,7 +22,12 @@ let make = () => {
       }
     )
 
-  let body = <StatsTable stattedChars={allStattedChars} />
+  let body =
+    <StatsTable
+      stattedChars={allStattedChars}
+      homelandFilter={state.homelandFilter}
+      classFilter={state.classFilter}
+    />
 
   <React.Fragment>
     <MaterialUi_CssBaseline />

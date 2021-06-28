@@ -43,19 +43,11 @@ let make = (
     classFilter->Store.UpdateFilterClass->dispatch
   }
 
-  let classButtonName = switch classFilter {
-  | None => "Classes: All"
-  | Some(class) => `Class: ${class.name}`
-  }->React.string
-
-  let homelandButtonName = switch homelandFilter {
-  | None => "Homelands: All"
-  | Some(homeland) => `Homeland: ${homeland.name}`
-  }->React.string
-
   <AppBar position={#Static}>
     <Toolbar>
-      <Button onClick={handleHomelandsClick}> {homelandButtonName} </Button>
+      <Button onClick={handleHomelandsClick}>
+        {Store.homelandFilterLabel(homelandFilter)->React.string}
+      </Button>
       <Menu
         id="homelands-menu"
         anchorEl={Any(homelandsAnchorEl)}
@@ -74,7 +66,9 @@ let make = (
         })
         ->React.array}
       </Menu>
-      <Button onClick={handleClassesClick}> {classButtonName} </Button>
+      <Button onClick={handleClassesClick}>
+        {Store.classFilterLabel(classFilter)->React.string}
+      </Button>
       <Menu
         id="classes-menu"
         anchorEl={Any(classesAnchorEl)}

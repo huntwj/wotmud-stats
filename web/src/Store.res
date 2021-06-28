@@ -6,10 +6,22 @@ open Types
 type state = {
   homelands: Map.String.t<homeland>,
   classes: Map.String.t<class>,
-  stattedChars: Map.String.t<stattedChar>,
+  stattedChars: Map.String.t<StattedChar.t>,
   homelandFilter: option<homeland>,
   classFilter: option<class>,
 }
+
+let classFilterLabel = (classFilter: option<class>) =>
+  switch classFilter {
+  | None => "Classes: All"
+  | Some(class) => `Class: ${class.name}`
+  }
+
+let homelandFilterLabel = (homelandFilter: option<homeland>) =>
+  switch homelandFilter {
+  | None => "Homelands: All"
+  | Some(homeland) => `Homeland: ${homeland.name}`
+  }
 
 let mapFromArray = arrData => arrData->Array.map(e => (e.id, e))->Map.String.fromArray
 
