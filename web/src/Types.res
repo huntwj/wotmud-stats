@@ -50,6 +50,30 @@ module CharStats = {
     | Dex => cs.dex
     | Con => cs.con
     }
+
+  let set = (self, stat: Stat.t, newVal) =>
+    switch stat {
+    | Str => {
+        ...self,
+        str: newVal,
+      }
+    | Int => {
+        ...self,
+        _int: newVal,
+      }
+    | Wil => {
+        ...self,
+        wil: newVal,
+      }
+    | Dex => {
+        ...self,
+        dex: newVal,
+      }
+    | Con => {
+        ...self,
+        con: newVal,
+      }
+    }
 }
 
 module StattedChar = {

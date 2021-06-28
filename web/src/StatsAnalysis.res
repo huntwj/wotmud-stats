@@ -17,6 +17,14 @@ module HistogramData = {
   let maxObservation = self => self.counts->Map.Int.maxKey
 
   let get = (self, val) => self.counts->Map.Int.get(val)->Option.getWithDefault(0)
+
+  let getGte = (self, val) => self.counts->Map.Int.toArray->Js.Array2.reduce((acc, (key, value)) =>
+      if key >= val {
+        acc + value
+      } else {
+        acc
+      }
+    , 0)
 }
 
 type t = {
